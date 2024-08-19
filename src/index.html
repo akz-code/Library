@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen font-sans"
+  >
+    <header
+      class="flex justify-between items-center bg-gray-700 p-5 text-white w-screen"
+    >
+      <h1 class="text-2xl font-bold">My Library</h1>
+      <button
+        class="border-2 border-white rounded-lg p-1 hover:bg-slate-800 active:scale-105"
+      >
+        Log in
+      </button>
+    </header>
+
+    <div
+      class="p-10 inset-0 fixed backdrop-blur-md bg-black bg-opacity-75 -z-10 flex justify-center items-center transition-all duration-500 ease-in-out opacity-0"
+      id="modal"
+    >
+      <div
+        id="form-container"
+        class="scale-0 bg-slate-200 m-auto p-5 shadow-lg shadow-black rounded-lg transition-all duration-500 ease-in-out"
+      >
+        <h2 class="font-bold text-xl mb-3">Add new book</h2>
+
+        <form id="form" class="flex flex-col gap-y-4" action="">
+          <input
+            required
+            maxlength="100"
+            class="p-2 rounded-lg"
+            placeholder="Title"
+            id="title"
+            type="text"
+          />
+          <input
+            required
+            maxlength="100"
+            class="p-2 rounded-lg"
+            placeholder="Author"
+            id="author"
+            type="text"
+          />
+          <input
+            required
+            max="10000"
+            class="p-2 rounded-lg"
+            placeholder="Pages"
+            id="pages"
+            type="number"
+          />
+          <div class="mt-1 mb-1 w-full text-center text-lg">
+            <label for="read"> Have you read it?</label>
+            <input id="read" type="checkbox" />
+          </div>
+          <div class="flex justify-center gap-6">
+            <button
+              class="font-bold cursor-pointer rounded-md active:scale-105 bg-green-400 hover:bg-green-900 hover:text-white bottom-2 right-2 border border-black px-2 py-1"
+              type="submit"
+              id="buttonSave"
+            >
+              Save
+            </button>
+            <div
+              class="text-white cursor-pointer rounded-md bg-gray-500 hover:bg-gray-900 active:scale-105 bottom-2 right-2 border border-black px-2 py-1"
+              id="buttonClose"
+            >
+              Close
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <main class="bg-slate-300 w-screen flex-1 flex flex-col items-center">
+      <button
+        id="buttonAddBook"
+        class="mt-4 cursor-pointer bg-gradient-to-r from-stone-500 to-stone-600 rounded-lg text-white p-3 hover:from-stone-800 hover:to-stone-700 hover:border-1 hover:border-gray-800 active:scale-105 shadow-sm shadow-slate-500"
+      >
+        + Add new book
+      </button>
+
+      <div
+        style="
+          display: grid;
+          gap: 3rem;
+          padding: 5rem;
+          width: 100%;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        "
+        id="book-grid"
+      >
+        
+      </div>
+    </main>
+    <footer class="flex justify-center bg-gray-900 p-5 text-white w-screen">
+      <p>
+        Created with ❤️ by
+        <a
+          class="font-bold"
+          target="_blank"
+          href="https://vladi-kz.github.io/personal-website/"
+          >Vladi-KZ</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
