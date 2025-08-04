@@ -1,2 +1,2 @@
-Simple library for practice JavaScript. Demo [here](https://aaron-kz.github.io/Library/)
+Simple library for practice JavaScript. Demo [here](https://akz-code.github.io/Library/)
 
